@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    ::-webkit-scrollbar { display: none;}
+    body { font-family: 'Inter', sans-serif; }
+    .highlighted-section {
+      outline: 2px solid #3F20FB;
+      background-color: rgba(63, 32, 251, 0.1);
+    }
+    .edit-button {
+      position: absolute;
+      z-index: 1000;
+    }
+    html, body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "night-navy": "#0a0f1c",
+            "neon-pink": "#ff1b8d",
+            "neon-blue": "#00d4ff",
+            "neon-green": "#39ff14"
+          },
+          fontFamily: {
+            sans: [
+              "Inter",
+              "sans-serif"
+            ]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-night-navy text-white">
+
+<!-- Header -->
+<header id="header" class="fixed top-0 w-full z-50 bg-night-navy/90 backdrop-blur-md border-b border-neon-blue/20">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-moon text-neon-pink text-2xl"></i>
+                <span class="text-xl font-bold">Night Bloom</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <span class="hover:text-neon-pink transition-colors cursor-pointer">Home</span>
+                <span class="hover:text-neon-pink transition-colors cursor-pointer">Products</span>
+                <span class="hover:text-neon-pink transition-colors cursor-pointer">Quick Delivery</span>
+                <span class="hover:text-neon-pink transition-colors cursor-pointer">Store Info</span>
+                <span class="hover:text-neon-pink transition-colors cursor-pointer">Contact</span>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <button class="bg-neon-green text-black px-4 py-2 rounded-full font-medium hover:bg-neon-green/80 transition-colors">
+                    <i class="fab fa-line mr-2"></i>LINE Order
+                </button>
+                <button class="text-neon-blue hover:text-neon-blue/80">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="relative h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover opacity-70" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fc1c22a874-7f6d5fa058603910c3b9.png" alt="nighttime city skyline with neon lights and beautiful flowers in foreground, urban aesthetic, dark moody atmosphere">
+        <div class="absolute inset-0 bg-gradient-to-r from-night-navy/80 via-transparent to-night-navy/60"></div>
+    </div>
+    <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <span class="text-neon-pink">Night Bloom</span><br>
+            <span class="text-2xl md:text-3xl font-normal">A florist for the city at night</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+            Whether after work or for a sudden gift, we deliver your feelings without delay
+        </p>
+        <div class="bg-neon-blue/10 border border-neon-blue/30 rounded-2xl p-6 mb-8 backdrop-blur-sm">
+            <div class="flex items-center justify-center space-x-2 mb-2">
+                <i class="fas fa-clock text-neon-blue text-2xl"></i>
+                <span class="text-2xl font-bold text-neon-blue">Delivered in as fast as 60 minutes</span>
+            </div>
+            <p class="text-gray-300">Open until 10PM • Serving all of Nagoya city</p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
+            <button class="bg-neon-pink hover:bg-neon-pink/80 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors">
+                <i class="fas fa-shopping-bag mr-2"></i>Shop Now
+            </button>
+            <button class="bg-neon-green hover:bg-neon-green/80 text-black px-8 py-4 rounded-full font-semibold text-lg transition-colors">
+                <i class="fab fa-line mr-2"></i>Order via LINE
+            </button>
+            <button class="border border-neon-blue hover:bg-neon-blue/10 text-neon-blue px-8 py-4 rounded-full font-semibold text-lg transition-colors">
+                <i class="fas fa-phone mr-2"></i>Call Now
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Delivery Features -->
+<section id="features" class="py-16 bg-gradient-to-b from-night-navy to-slate-900">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">
+            <span class="text-neon-blue">Why Choose</span> Night Bloom?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-slate-800/50 border border-neon-pink/20 rounded-2xl p-8 text-center hover:border-neon-pink/40 transition-colors">
+                <div class="w-16 h-16 bg-neon-pink/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-rocket text-neon-pink text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-neon-pink">Express Delivery</h3>
+                <p class="text-gray-300">60-minute delivery available from 7PM-10PM. Perfect for last-minute surprises.</p>
+            </div>
+            <div class="bg-slate-800/50 border border-neon-blue/20 rounded-2xl p-8 text-center hover:border-neon-blue/40 transition-colors">
+                <div class="w-16 h-16 bg-neon-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-clock text-neon-blue text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-neon-blue">Late Night Hours</h3>
+                <p class="text-gray-300">Open until 10PM daily. We're here when other florists have closed.</p>
+            </div>
+            <div class="bg-slate-800/50 border border-neon-green/20 rounded-2xl p-8 text-center hover:border-neon-green/40 transition-colors">
+                <div class="w-16 h-16 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-mobile-alt text-neon-green text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-neon-green">Instant Payment</h3>
+                <p class="text-gray-300">Quick checkout via LINE, credit card, QR codes, or transit IC cards.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Categories -->
+<section id="categories" class="py-16 bg-slate-900">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">
+            <span class="text-neon-pink">Perfect Flowers</span> for Every Moment
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group cursor-pointer">
+                <div class="relative overflow-hidden rounded-2xl mb-4">
+                    <img class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9adafa6ddd-a2b7f54d3b09b2ec3549.png" alt="elegant birthday bouquet with pink roses and neon lighting, nighttime aesthetic">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-neon-pink text-white px-3 py-1 rounded-full text-sm font-medium">Special Occasions</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Birthday &amp; Celebrations</h3>
+                <p class="text-gray-400">Perfect for evening parties and surprise moments</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative overflow-hidden rounded-2xl mb-4">
+                    <img class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f039f24a9e-cbc638823baa43b931d4.png" alt="romantic red roses bouquet for proposals with city lights background">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-neon-blue text-white px-3 py-1 rounded-full text-sm font-medium">Romance</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Proposals &amp; Romance</h3>
+                <p class="text-gray-400">Create magical moments under the city lights</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative overflow-hidden rounded-2xl mb-4">
+                    <img class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2b022f983b-0d917cd4a347163d91da.png" alt="elegant white wedding flowers bouquet with neon accents, modern style">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-neon-green text-black px-3 py-1 rounded-full text-sm font-medium">Weddings</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Wedding After-Parties</h3>
+                <p class="text-gray-400">Beautiful bouquets for evening celebrations</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="relative overflow-hidden rounded-2xl mb-4">
+                    <img class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5c4e2dcbe9-09f0e2df9afeb4457b30.png" alt="mixed colorful flowers bouquet for everyday occasions with urban background">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">Everyday</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Everyday Moments</h3>
+                <p class="text-gray-400">Brighten someone's day after work</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Area -->
+<section id="service-area" class="py-16 bg-gradient-to-b from-slate-900 to-night-navy">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">
+                    <span class="text-neon-blue">Nagoya-Wide</span> Delivery
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    We deliver throughout Nagoya city, focusing on business districts, station areas, and downtown locations where you need us most.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-check-circle text-neon-green text-xl"></i>
+                        <span>Sakae &amp; Fushimi business district</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-check-circle text-neon-green text-xl"></i>
+                        <span>Nagoya Station area</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-check-circle text-neon-green text-xl"></i>
+                        <span>Kanayama &amp; Osu shopping areas</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-check-circle text-neon-green text-xl"></i>
+                        <span>All major hotels &amp; event venues</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img class="w-full h-96 object-cover rounded-2xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2abba8f402-4f371335713dd22c2842.png" alt="Nagoya city map at night with delivery routes and neon highlights, urban delivery service visualization">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section id="cta" class="py-16 bg-gradient-to-r from-neon-pink/20 via-neon-blue/20 to-neon-green/20">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Send <span class="text-neon-pink">Beautiful Flowers</span> Tonight?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Don't let the day end without expressing your feelings. Order now for same-day delivery until 10PM.
+        </p>
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
+            <button class="bg-neon-pink hover:bg-neon-pink/80 text-white px-10 py-4 rounded-full font-bold text-lg transition-colors">
+                <i class="fas fa-shopping-bag mr-2"></i>Start Shopping
+            </button>
+            <button class="bg-neon-green hover:bg-neon-green/80 text-black px-10 py-4 rounded-full font-bold text-lg transition-colors">
+                <i class="fab fa-line mr-2"></i>Quick LINE Order
+            </button>
+        </div>
+        <div class="mt-8 flex items-center justify-center space-x-8 text-sm text-gray-400">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-clock text-neon-blue"></i>
+                <span>Open until 10PM</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-truck text-neon-green"></i>
+                <span>60-min delivery</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-credit-card text-neon-pink"></i>
+                <span>Instant payment</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="bg-black py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <i class="fas fa-moon text-neon-pink text-2xl"></i>
+                    <span class="text-xl font-bold">Night Bloom</span>
+                </div>
+                <p class="text-gray-400 mb-4">A florist for the city at night. Delivering feelings without delay.</p>
+                <div class="flex space-x-4">
+                    <i class="fab fa-instagram text-neon-pink text-xl hover:text-neon-pink/80 cursor-pointer"></i>
+                    <i class="fab fa-line text-neon-green text-xl hover:text-neon-green/80 cursor-pointer"></i>
+                    <i class="fab fa-twitter text-neon-blue text-xl hover:text-neon-blue/80 cursor-pointer"></i>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-neon-blue">Quick Links</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><span class="hover:text-white cursor-pointer">Products</span></li>
+                    <li><span class="hover:text-white cursor-pointer">Quick Delivery</span></li>
+                    <li><span class="hover:text-white cursor-pointer">Store Info</span></li>
+                    <li><span class="hover:text-white cursor-pointer">Contact</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-neon-green">Service Hours</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li>Monday - Sunday</li>
+                    <li>10:00 AM - 10:00 PM</li>
+                    <li>Express delivery until 10PM</li>
+                    <li>LINE orders 24/7</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-neon-pink">Contact</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><i class="fas fa-phone mr-2"></i>052-XXX-XXXX</li>
+                    <li><i class="fab fa-line mr-2"></i>@nightbloom</li>
+                    <li><i class="fas fa-envelope mr-2"></i>info@nightbloom.jp</li>
+                    <li><i class="fas fa-map-marker-alt mr-2"></i>Nagoya, Japan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+            <p>© 2024 Night Bloom. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
