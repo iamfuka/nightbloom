@@ -59,7 +59,14 @@ body{
 }
 .brand{ display:flex; align-items:center; gap:.75rem; }
 .brand__icon{ font-size:1.5rem; color:var(--neutral-900); }
-.brand__name{ font-size:1.25rem; color:var(--neutral-900); font-weight:600; }
+.brand__name{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  font-weight: 400;      /* Regular */
+  font-size: 20px;       /* = 1.25rem */
+  line-height: 28px;     /* = 1.75rem */
+  letter-spacing: 0;     /* 0% と同義（normalでもOK） */
+  color: var(--neutral-900);
+}
 .brand--footer .brand__icon{ color:#fff; }
 .brand__name--light{ color:#fff; }
 
