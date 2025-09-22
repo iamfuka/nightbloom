@@ -1,321 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NightBloom</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NightBloom (Pure CSS)</title>
 
-    <!-- Tailwind (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet" />
 
-    <!-- Font Awesome (icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
 
-    <!-- (任意) フォント -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Header -->
+  <header id="header" class="site-header">
+    <div class="container">
+      <div class="site-header__bar">
+        <div class="brand">
+          <i class="fa-solid fa-moon brand__icon"></i>
+          <span class="brand__name">NightBloom</span>
+        </div>
 
-    <!-- カスタムCSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header id="header" class="bg-white border-b border-neutral-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <i class="fa-solid fa-moon text-2xl text-neutral-900 mr-3"></i>
-            <span class="text-xl text-neutral-900">NightBloom</span>
+        <nav class="nav nav--desktop">
+          <a href="#" class="nav__link">Home</a>
+          <a href="#" class="nav__link">Products</a>
+          <a href="#" class="nav__link">Quick Delivery</a>
+          <a href="#" class="nav__link">Store Info</a>
+          <a href="#" class="nav__link">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <button class="icon-btn" aria-label="Cart">
+            <i class="fa-solid fa-shopping-cart"></i>
+          </button>
+          <button class="icon-btn hamburger" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero__overlay"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">A florist for the city at night</h1>
+          <p class="hero__lead">
+            Whether after work or for a sudden gift, we deliver your feelings without delay. Open until 10PM.
+          </p>
+          <div class="pill">
+            <i class="fa-solid fa-clock pill__icon"></i>
+            Delivered in as fast as 60 minutes
           </div>
-          <nav class="hidden md:flex space-x-8">
-            <span class="text-neutral-700 hover:text-neutral-900 cursor-pointer">Home</span>
-            <span class="text-neutral-700 hover:text-neutral-900 cursor-pointer">Products</span>
-            <span class="text-neutral-700 hover:text-neutral-900 cursor-pointer">Quick Delivery</span>
-            <span class="text-neutral-700 hover:text-neutral-900 cursor-pointer">Store Info</span>
-            <span class="text-neutral-700 hover:text-neutral-900 cursor-pointer">Contact</span>
-          </nav>
-          <div class="flex items-center space-x-4">
-            <button class="p-2 text-neutral-700 hover:text-neutral-900">
-              <i class="fa-solid fa-shopping-cart"></i>
+          <div class="btn-row">
+            <button class="btn btn--light">
+              <i class="fa-brands fa-line btn__icon"></i> Order via LINE
             </button>
-            <button class="md:hidden p-2 text-neutral-700">
-              <i class="fa-solid fa-bars"></i>
+            <button class="btn btn--outline-light">
+              <i class="fa-solid fa-phone btn__icon"></i> Call Now
             </button>
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main id="main">
-      <section id="hero" class="relative h-[600px] bg-neutral-900">
-        <div class="absolute inset-0 bg-neutral-800"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div class="text-white max-w-2xl">
-            <h1 class="text-5xl mb-6">A florist for the city at night</h1>
-            <p class="text-xl mb-8">
-              Whether after work or for a sudden gift, we deliver your feelings without delay. Open until 10PM.
+    <!-- Service Hours -->
+    <section id="service-hours" class="section section--muted">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <h2 class="section__title-left">Business Hours &amp; Service Area</h2>
+            <div class="stack">
+              <div class="icon-line">
+                <i class="fa-solid fa-clock icon-line__icon"></i>
+                <span class="icon-line__text">Daily: 9:00 AM - 10:00 PM</span>
+              </div>
+              <div class="icon-line">
+                <i class="fa-solid fa-map-marker-alt icon-line__icon"></i>
+                <span class="icon-line__text">All of Nagoya City</span>
+              </div>
+              <div class="icon-line">
+                <i class="fa-solid fa-truck icon-line__icon"></i>
+                <span class="icon-line__text">Express delivery: 7PM - 10PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="placeholder h-64">
+            <span class="placeholder__text">Nagoya Service Area Map</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="section">
+      <div class="container">
+        <h2 class="section__title-center">Perfect for Every Occasion</h2>
+        <div class="grid-3">
+          <div class="text-card">
+            <div class="placeholder h-48 mb-16">
+              <span class="placeholder__text">Special Occasions</span>
+            </div>
+            <h3 class="text-card__title">Special Occasions</h3>
+            <p class="muted">Birthdays, farewells, wedding after-parties</p>
+          </div>
+
+          <div class="text-card">
+            <div class="placeholder h-48 mb-16">
+              <span class="placeholder__text">Everyday Bouquets</span>
+            </div>
+            <h3 class="text-card__title">Everyday</h3>
+            <p class="muted">Perfect for daily surprises and gestures</p>
+          </div>
+
+          <div class="text-card">
+            <div class="placeholder h-48 mb-16">
+              <span class="placeholder__text">Stand Flowers</span>
+            </div>
+            <h3 class="text-card__title">Others</h3>
+            <p class="muted">Stand flowers, in-store decorations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Delivery -->
+    <section id="quick-delivery" class="section section--dark">
+      <div class="container">
+        <div class="section__head center">
+          <h2 class="section__title-inverse">Nighttime Quick Delivery</h2>
+          <p class="lead-inverse">3 simple steps to get your flowers delivered tonight</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="step">
+            <div class="circle">1</div>
+            <h3 class="step__title">Select Your Bouquet</h3>
+            <p class="muted-inverse">Choose from our available inventory</p>
+          </div>
+
+          <div class="step">
+            <div class="circle">2</div>
+            <h3 class="step__title">Pick Time Slot</h3>
+            <p class="muted-inverse">7PM - 10PM delivery windows</p>
+          </div>
+
+          <div class="step">
+            <div class="circle">3</div>
+            <h3 class="step__title">Instant Payment</h3>
+            <p class="muted-inverse">Credit card, QR, or IC card payment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured-products" class="section">
+      <div class="container">
+        <div class="section__row">
+          <h2 class="section__title-left">Available for Immediate Delivery</h2>
+          <a href="#" class="link-muted">View All <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="grid-4">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card__media">
+              <div class="placeholder h-48">
+                <span class="placeholder__text">Rose Bouquet</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <span class="badge">Available Now</span>
+              <h3 class="card__title">Premium Rose Bouquet</h3>
+              <p class="muted small">Perfect for proposals</p>
+              <p class="price">¥4,500</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card__media">
+              <div class="placeholder h-48">
+                <span class="placeholder__text">Mixed Bouquet</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <span class="badge">Available Now</span>
+              <h3 class="card__title">Seasonal Mix</h3>
+              <p class="muted small">Colorful and vibrant</p>
+              <p class="price">¥3,200</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card__media">
+              <div class="placeholder h-48">
+                <span class="placeholder__text">White Lilies</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <span class="badge">Available Now</span>
+              <h3 class="card__title">Elegant White Lilies</h3>
+              <p class="muted small">Pure and sophisticated</p>
+              <p class="price">¥3,800</p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <div class="card__media">
+              <div class="placeholder h-48">
+                <span class="placeholder__text">Birthday Special</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <span class="badge">Available Now</span>
+              <h3 class="card__title">Birthday Special</h3>
+              <p class="muted small">Bright and cheerful</p>
+              <p class="price">¥2,900</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section section--muted">
+      <div class="container">
+        <h2 class="section__title-center">What Our Customers Say</h2>
+
+        <div class="grid-2">
+          <article class="card card--shadow">
+            <div class="media-line">
+              <img class="avatar" src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=123"
+                   alt="Customer" />
+              <div>
+                <h4 class="media-line__title">Yuki M.</h4>
+                <p class="muted small">Nagoya Station Area</p>
+              </div>
+            </div>
+            <p class="body-text">
+              "Saved my evening! Got beautiful flowers delivered at 9PM for my girlfriend's birthday.
+              Perfect service for busy professionals."
             </p>
-            <div class="bg-white text-neutral-900 inline-block px-6 py-3 rounded-lg mb-8">
-              <i class="fa-solid fa-clock mr-2"></i>
-              Delivered in as fast as 60 minutes
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <button class="bg-white text-neutral-900 px-8 py-4 rounded-lg hover:bg-neutral-100">
-                <i class="fa-brands fa-line mr-2"></i>
-                Order via LINE
-              </button>
-              <button class="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900">
-                <i class="fa-solid fa-phone mr-2"></i>
-                Call Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section id="service-hours" class="py-16 bg-neutral-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 class="text-3xl text-neutral-900 mb-6">Business Hours & Service Area</h2>
-              <div class="space-y-4">
-                <div class="flex items-center">
-                  <i class="fa-solid fa-clock text-neutral-600 mr-3"></i>
-                  <span class="text-lg">Daily: 9:00 AM - 10:00 PM</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fa-solid fa-map-marker-alt text-neutral-600 mr-3"></i>
-                  <span class="text-lg">All of Nagoya City</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fa-solid fa-truck text-neutral-600 mr-3"></i>
-                  <span class="text-lg">Express delivery: 7PM - 10PM</span>
-                </div>
+          <article class="card card--shadow">
+            <div class="media-line">
+              <img class="avatar" src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=456"
+                   alt="Customer" />
+              <div>
+                <h4 class="media-line__title">Takeshi S.</h4>
+                <p class="muted small">Sakae District</p>
               </div>
             </div>
-            <div class="bg-neutral-300 rounded-lg h-64 flex items-center justify-center">
-              <span class="text-white text-lg">Nagoya Service Area Map</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="categories" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl text-center text-neutral-900 mb-12">Perfect for Every Occasion</h2>
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-neutral-300 rounded-lg h-48 mb-4 flex items-center justify-center">
-                <span class="text-white">Special Occasions</span>
-              </div>
-              <h3 class="text-xl mb-2">Special Occasions</h3>
-              <p class="text-neutral-600">Birthdays, farewells, wedding after-parties</p>
-            </div>
-            <div class="text-center">
-              <div class="bg-neutral-300 rounded-lg h-48 mb-4 flex items-center justify-center">
-                <span class="text-white">Everyday Bouquets</span>
-              </div>
-              <h3 class="text-xl mb-2">Everyday</h3>
-              <p class="text-neutral-600">Perfect for daily surprises and gestures</p>
-            </div>
-            <div class="text-center">
-              <div class="bg-neutral-300 rounded-lg h-48 mb-4 flex items-center justify-center">
-                <span class="text-white">Stand Flowers</span>
-              </div>
-              <h3 class="text-xl mb-2">Others</h3>
-              <p class="text-neutral-600">Stand flowers, in-store decorations</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="quick-delivery" class="py-16 bg-neutral-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl mb-4">Nighttime Quick Delivery</h2>
-            <p class="text-xl">3 simple steps to get your flowers delivered tonight</p>
-          </div>
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-white text-neutral-900 w-12 h-12 rounded-full flex items-center justify-center text-xl mx-auto mb-4">1</div>
-              <h3 class="text-lg mb-2">Select Your Bouquet</h3>
-              <p class="text-neutral-300">Choose from our available inventory</p>
-            </div>
-            <div class="text-center">
-              <div class="bg-white text-neutral-900 w-12 h-12 rounded-full flex items-center justify-center text-xl mx-auto mb-4">2</div>
-              <h3 class="text-lg mb-2">Pick Time Slot</h3>
-              <p class="text-neutral-300">7PM - 10PM delivery windows</p>
-            </div>
-            <div class="text-center">
-              <div class="bg-white text-neutral-900 w-12 h-12 rounded-full flex items-center justify-center text-xl mx-auto mb-4">3</div>
-              <h3 class="text-lg mb-2">Instant Payment</h3>
-              <p class="text-neutral-300">Credit card, QR, or IC card payment</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="featured-products" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center mb-12">
-            <h2 class="text-3xl text-neutral-900">Available for Immediate Delivery</h2>
-            <span class="text-neutral-600 hover:text-neutral-900 cursor-pointer">
-              View All <i class="fa-solid fa-arrow-right ml-1"></i>
-            </span>
-          </div>
-          <div class="grid md:grid-cols-4 gap-6">
-            <div class="border border-neutral-200 rounded-lg overflow-hidden">
-              <div class="bg-neutral-300 h-48 flex items-center justify-center">
-                <span class="text-white">Rose Bouquet</span>
-              </div>
-              <div class="p-4">
-                <div class="bg-neutral-100 text-neutral-800 text-xs px-2 py-1 rounded-full inline-block mb-2">Available Now</div>
-                <h3 class="mb-1">Premium Rose Bouquet</h3>
-                <p class="text-neutral-600 text-sm mb-2">Perfect for proposals</p>
-                <p class="text-lg">¥4,500</p>
-              </div>
-            </div>
-            <div class="border border-neutral-200 rounded-lg overflow-hidden">
-              <div class="bg-neutral-300 h-48 flex items-center justify-center">
-                <span class="text-white">Mixed Bouquet</span>
-              </div>
-              <div class="p-4">
-                <div class="bg-neutral-100 text-neutral-800 text-xs px-2 py-1 rounded-full inline-block mb-2">Available Now</div>
-                <h3 class="mb-1">Seasonal Mix</h3>
-                <p class="text-neutral-600 text-sm mb-2">Colorful and vibrant</p>
-                <p class="text-lg">¥3,200</p>
-              </div>
-            </div>
-            <div class="border border-neutral-200 rounded-lg overflow-hidden">
-              <div class="bg-neutral-300 h-48 flex items-center justify-center">
-                <span class="text-white">White Lilies</span>
-              </div>
-              <div class="p-4">
-                <div class="bg-neutral-100 text-neutral-800 text-xs px-2 py-1 rounded-full inline-block mb-2">Available Now</div>
-                <h3 class="mb-1">Elegant White Lilies</h3>
-                <p class="text-neutral-600 text-sm mb-2">Pure and sophisticated</p>
-                <p class="text-lg">¥3,800</p>
-              </div>
-            </div>
-            <div class="border border-neutral-200 rounded-lg overflow-hidden">
-              <div class="bg-neutral-300 h-48 flex items-center justify-center">
-                <span class="text-white">Birthday Special</span>
-              </div>
-              <div class="p-4">
-                <div class="bg-neutral-100 text-neutral-800 text-xs px-2 py-1 rounded-full inline-block mb-2">Available Now</div>
-                <h3 class="mb-1">Birthday Special</h3>
-                <p class="text-neutral-600 text-sm mb-2">Bright and cheerful</p>
-                <p class="text-lg">¥2,900</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" class="py-16 bg-neutral-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl text-center text-neutral-900 mb-12">What Our Customers Say</h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-              <div class="flex items-center mb-4">
-                <img src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=123" alt="Customer" class="w-12 h-12 rounded-full mr-4" />
-                <div>
-                  <h4>Yuki M.</h4>
-                  <p class="text-neutral-600 text-sm">Nagoya Station Area</p>
-                </div>
-              </div>
-              <p class="text-neutral-700">
-                "Saved my evening! Got beautiful flowers delivered at 9PM for my girlfriend's birthday. Perfect service for busy professionals."
-              </p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-              <div class="flex items-center mb-4">
-                <img src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=456" alt="Customer" class="w-12 h-12 rounded-full mr-4" />
-                <div>
-                  <h4>Takeshi S.</h4>
-                  <p class="text-neutral-600 text-sm">Sakae District</p>
-                </div>
-              </div>
-              <p class="text-neutral-700">
-                "Amazing quality and super fast delivery. The LINE ordering system is so convenient. Will definitely use again!"
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="cta" class="py-16 bg-neutral-900 text-white">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl mb-4">Need Flowers Tonight?</h2>
-          <p class="text-xl mb-8">Don't let time run out. Order now and get your flowers delivered within 60 minutes.</p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="bg-white text-neutral-900 px-8 py-4 rounded-lg hover:bg-neutral-100">
-              <i class="fa-brands fa-line mr-2"></i>
-              Quick Order via LINE
-            </button>
-            <button class="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900">
-              <i class="fa-solid fa-shopping-cart mr-2"></i>
-              Browse Products
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer id="footer" class="bg-neutral-800 text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-4 gap-8">
-          <div>
-            <div class="flex items-center mb-4">
-              <i class="fa-solid fa-moon text-2xl mr-3"></i>
-              <span class="text-xl">NightBloom</span>
-            </div>
-            <p class="text-neutral-300 mb-4">Your trusted nighttime florist in Nagoya</p>
-            <div class="flex space-x-4">
-              <span class="text-neutral-300 hover:text-white cursor-pointer">
-                <i class="fa-brands fa-instagram text-xl"></i>
-              </span>
-              <span class="text-neutral-300 hover:text-white cursor-pointer">
-                <i class="fa-brands fa-line text-xl"></i>
-              </span>
-              <span class="text-neutral-300 hover:text-white cursor-pointer">
-                <i class="fa-brands fa-twitter text-xl"></i>
-              </span>
-            </div>
-          </div>
-          <div>
-            <h3 class="mb-4">Quick Links</h3>
-            <ul class="space-y-2 text-neutral-300">
-              <li><span class="hover:text-white cursor-pointer">Products</span></li>
-              <li><span class="hover:text-white cursor-pointer">Quick Delivery</span></li>
-              <li><span class="hover:text-white cursor-pointer">Store Info</span></li>
-              <li><span class="hover:text-white cursor-pointer">FAQ</span></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="mb-4">Contact</h3>
-            <ul class="space-y-2 text-neutral-300">
-              <li><i class="fa-solid fa-phone mr-2"></i>052-123-4567</li>
-              <li><i class="fa-brands fa-line mr-2"></i>@nightbloom</li>
-              <li><i class="fa-solid fa-envelope mr-2"></i>info@nightbloom.jp</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="mb-4">Business Hours</h3>
-            <p class="text-neutral-300">Daily: 9:00 AM - 10:00 PM</p>
-            <p class="text-neutral-300 mt-2">Express Delivery: 7:00 PM - 10:00 PM</p>
-          </div>
-        </div>
-        <div class="border-t border-neutral-700 mt-8 pt-8 text-center text-neutral-400">
-          <p>&copy; 2025 NightBloom. All rights reserved.</p>
+            <p class="body-text">
+              "Amazing quality and super fast delivery. The LINE ordering system is so convenient.
+              Will definitely use again!"
+            </p>
+          </article>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="section section--dark">
+      <div class="container narrow center">
+        <h2 class="section__title-inverse">Need Flowers Tonight?</h2>
+        <p class="lead-inverse">
+          Don't let time run out. Order now and get your flowers delivered within 60 minutes.
+        </p>
+        <div class="btn-row center">
+          <button class="btn btn--light">
+            <i class="fa-brands fa-line btn__icon"></i> Quick Order via LINE
+          </button>
+          <button class="btn btn--outline-light">
+            <i class="fa-solid fa-shopping-cart btn__icon"></i> Browse Products
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="site-footer">
+    <div class="container">
+      <div class="grid-4 footer__grid">
+        <div>
+          <div class="brand brand--footer">
+            <i class="fa-solid fa-moon brand__icon"></i>
+            <span class="brand__name brand__name--light">NightBloom</span>
+          </div>
+          <p class="muted-inverse mb-16">Your trusted nighttime florist in Nagoya</p>
+          <div class="social">
+            <a class="social__link" href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social__link" href="#"><i class="fa-brands fa-line"></i></a>
+            <a class="social__link" href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Products</a></li>
+            <li><a href="#" class="footer__link">Quick Delivery</a></li>
+            <li><a href="#" class="footer__link">Store Info</a></li>
+            <li><a href="#" class="footer__link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Contact</h3>
+          <ul class="footer__list">
+            <li class="footer__item"><i class="fa-solid fa-phone me-8"></i>052-123-4567</li>
+            <li class="footer__item"><i class="fa-brands fa-line me-8"></i>@nightbloom</li>
+            <li class="footer__item"><i class="fa-solid fa-envelope me-8"></i>info@nightbloom.jp</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Business Hours</h3>
+          <p class="muted-inverse">Daily: 9:00 AM - 10:00 PM</p>
+          <p class="muted-inverse mt-8">Express Delivery: 7:00 PM - 10:00 PM</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 NightBloom. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
