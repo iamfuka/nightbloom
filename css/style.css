@@ -65,7 +65,7 @@ body{
   font-size: 20px;       /* = 1.25rem */
   line-height: 28px;     /* = 1.75rem */
   letter-spacing: 0;     /* 0% と同義（normalでもOK） */
-  color: var(--neutral-900);
+  color: #fff;
 }
 .brand--footer .brand__icon{ color:#fff; }
 .brand__name--light{ color:#fff; }
