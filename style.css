@@ -1,0 +1,14 @@
+::-webkit-scrollbar { display: none; }
+body { font-family: 'Inter', sans-serif; }
+.highlighted-section {
+  outline: 2px solid #3F20FB;
+  background-color: rgba(63, 32, 251, 0.1);
+}
+.edit-button {
+  position: absolute;
+  z-index: 1000;
+}
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
